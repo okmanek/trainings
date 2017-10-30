@@ -16,13 +16,13 @@ Szkolenie git
 			> Pliki, referencja do rodzica
 			> Sha1 - 40 znaków. f: data -> sha1 [40 chars]
 		o Wytłumaczyć bąbelki, drzewo
-		o Stany: untracked, unmodified, modified, staged, commited (?)
+		o Stany: (non-existing) -> git touch x (untracked), git add x (staged (to be commited)) -> git commit (commited (in local commit)) -> edit (modified)
 
 2. REPO SETUP, CATALOGUE STRUCTURE:
 	a. Git init / git clone <adres>
-	b. Katalog .git: ustawienia danego repo, zapisane pliki w róznych wersjach
+	b. [narysować working directory] Katalog .git: ustawienia danego repo, zapisane pliki w róznych wersjach
 	c. Git config --global.user.mail [imie.nazwisko@ericsson.com]
-	c. Git config --global.user.name [Imie Nazwisko]
+	d. Git config --global.user.name [Imie Nazwisko]
 
 3. BASIC FLOW:
 	a. edit -> git add <plik> -> git commit -> git push
@@ -31,6 +31,9 @@ Szkolenie git
 	a. git add --help / git add -h / git help add / git help / git
 	b. git status
 	c. git log (--graph, --oneline, --decorate)
+    d. HEAD - referencja do obecnego commita
+    e. git diff HEAD^ (/~) (or <sha>)
+    f. git show <sha>
 
 5. ZDALNE, PUSHE, PULLE - do tej pory było lokalnie
 	a. Git remote, git remote show origin
@@ -40,6 +43,9 @@ Szkolenie git
 
 6. OTHERS:
 	a. git commit --amend
-	b. git stash; git stash list; git stash pop
-	c. git reset HEAD --soft (--hard)
-	d. Learngitbranching.js.org
+	b. git stash; git stash list; git pull; git stash pop
+	c. git reset HEAD --soft (--hard) - moving back to previous commits
+    d. git blame <file>
+	e. branche, git checkout <nazwa brancha>
+	f. git rm (--cached)
+	g. Learngitbranching.js.org
