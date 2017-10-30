@@ -2,6 +2,42 @@ https://github.com/samposm/git-guide/blob/master/5-anatomy-of-a-git-commit.md
 i całe to repo:
 github.com/samposm/git-guide
 
+notatki z "anatomy of a git commit":
+echo "dupa1" > file1 #4fc43... (sha1 of a file1)
+git hash-object file1
+git add file1
+ls .git/objects # 4f/ info/ pack/
+ls .git/objects/4f # c43a6
+git cat-file -p 4fc43 #dupa1 (f: <sha> -> data)
+
+#adding next file
+mkdir myDir
+echo "dupa2" > myDir/file2
+git hash-object myDir/file2 #f4fc29de... <sha1 of file2>
+ls .git/objects # 4f/ f4/ (<- new) info/ pack/
+ls .git/objects/f4 # fc29de693...
+
+git find .git/objects -type f
+#output:
+  f4/fc29de... blob
+  18/3eaf51... tree
+  4f/c43a6a... blob
+  5b/5da88...  commit
+  7b/4acco4... tree
+
+git cat-file -t <np.: f4fc29>
+git cat-file -p <7b4acce4>
+#output:
+  100644 blob... file1
+  040000 tree... myDir
+  #czyli to nasz main katalog
+git cat-file -p 183eaf
+#output:
+  100644 blob... file2
+  #czyli to katalog myDir
+
+
+
 
 .gitkeep file - undocumented, not a git feature. Just a placeholder.
 
