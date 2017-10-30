@@ -1,0 +1,45 @@
+Szkolenie git
+
+1. INFO WSTĘPNE, HISTORIA, TEORIA:
+	a. Kontrola wersji ogólnie:
+		o Version control (VC), po co jest, VCS
+		o Local: (bez VCS, w katalogach) lub RCS
+		o Centralised (SVN)
+		o Decentralised (git). Dlaczego git > svn.
+	b. historia:
+		o Linus Torvalds, kernel 2005, bitkeeper, 2 tygodnie
+		o Darmowy, offline (most OSes are local), small & big projects (KDE, Fb, Linux Kernel, 3gsim xD)
+	c. Pojęcia
+		o Repozytorium (repo)
+		o Commit - obraz całego repo w danym momencie:
+			> obraz całego repo w danym momencie
+			> Pliki, referencja do rodzica
+			> Sha1 - 40 znaków
+		o Wytłumaczyć bąbelki, drzewo
+		o Stany: untracked, unmodified, modified, staged, commited (?)
+
+2. REPO SETUP, CATALOGUE STRUCTURE:
+	a. Git init / git clone <adres>
+	b. Katalog .git: ustawienia danego repo, zapisane pliki w róznych wersjach
+	c. Git config --global.user.mail [imie.nazwisko@ericsson.com]
+	c. Git config --global.user.name [Imie Nazwisko]
+
+3. BASIC FLOW:
+	a. edit -> git add <plik> -> git commit -> git push
+
+4. LOGI, ITP.:
+	a. git add --help / git add -h / git help add / git help / git
+	b. git status
+	c. git log (--graph, --oneline, --decorate)
+
+5. ZDALNE, PUSHE, PULLE - do tej pory było lokalnie
+	a. Git remote, git remote show origin
+	b. Remote - fancy nazwa na zdalne miejsce gdzie trzymamy kod
+	c. Git pull
+	d. Git push
+
+6. OTHERS:
+	a. git commit --amend
+	b. git stash; git stash list; git stash pop
+	c. git reset HEAD --soft (--hard)
+	d. Learngitbranching.js.org
