@@ -1,0 +1,17 @@
+https://github.com/samposm/git-guide/blob/master/5-anatomy-of-a-git-commit.md
+i całe to repo:
+github.com/samposm/git-guide
+
+
+.gitkeep file - undocumented, not a git feature. Just a placeholder.
+
+
+
+sha1 anatomy:
+	meta data
+		commit message
+		commiter
+		commit date
+		author
+		authoring date
+	Hash of Entire Working Directory
