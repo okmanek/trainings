@@ -1,7 +1,7 @@
 Szkolenie git
 
 1. INFO WSTĘPNE, HISTORIA, TEORIA:
-	a. Kontrola wersji ogólnie:
+	a. Kontrola wersji ogólnie (save + load + multiusers, 1 kod):
 		o Version control (VC), po co jest, VCS
 		o Local: (bez VCS, w katalogach) lub RCS
 		o Centralised (SVN)
@@ -14,7 +14,7 @@ Szkolenie git
 		o Commit - obraz całego repo w danym momencie:
 			> obraz całego repo w danym momencie
 			> Pliki, referencja do rodzica
-			> Sha1 - 40 znaków
+			> Sha1 - 40 znaków. f: data -> sha1 [40 chars]
 		o Wytłumaczyć bąbelki, drzewo
 		o Stany: untracked, unmodified, modified, staged, commited (?)
 
